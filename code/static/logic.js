@@ -15,9 +15,10 @@ Plotly.d3.json("/api", (error, response)=>{
         x: year,
         y: case_count,
         mode: 'lines+markers',
+        text: poptext(fatality),
         marker: {
           size: fatality,
-          sizeref: 0.2,
+          sizeref: 0.09,
           sizemode: 'area',
           color: 'rgba(230, 46, 0, .7)'
         },
@@ -59,9 +60,10 @@ Plotly.d3.json("api/mental-health", (error, response)=>{
         x: year,
         y: case_count_yes,
         mode: 'lines+markers',
+        text: poptext(fatality_yes),
         marker: {
           size: fatality_yes,
-          sizeref: 0.2,
+          sizeref: 0.05,
           sizemode: 'area',
           color: 'rgba(255, 71, 26, 0.8)'
         },
@@ -72,9 +74,10 @@ Plotly.d3.json("api/mental-health", (error, response)=>{
         x: year,
         y: case_count_no,
         mode: 'lines+markers',
+        text: poptext(fatality_no),
         marker: {
           size: fatality_no,
-          sizeref: 0.2,
+          sizeref: 0.05,
           sizemode: 'area',
           color: 'rgba(10, 84, 0, .7)'
         },
@@ -115,9 +118,10 @@ Plotly.d3.json("api/weapon-legality", (error, response)=>{
         x: year,
         y: case_count_yes,
         mode: 'lines+markers',
+        text: poptext(fatality_yes),
         marker: {
           size: fatality_yes,
-          sizeref: 0.2,
+          sizeref: 0.05,
           sizemode: 'area',
           color:'rgba(255, 71, 26, 0.8)'
         },
@@ -128,9 +132,10 @@ Plotly.d3.json("api/weapon-legality", (error, response)=>{
         x: year,
         y: case_count_no,
         mode: 'lines+markers',
+        text: poptext(fatality_no),
         marker: {
           size: fatality_no,
-          sizeref: 0.2,
+          sizeref: 0.05,
           sizemode: 'area',
           color: 'rgba(12, 100, 0, .5)'
         },
@@ -169,3 +174,11 @@ function getData(dataset) {
         totalcase_chart();
         break;
     }};
+
+function poptext(alist){
+  var text_list = []
+  for (var i=0; i < alist.length; i++){
+    text_list.push("'Fatalities: " + alist[i]+"'");
+  } 
+  return text_list;
+};
