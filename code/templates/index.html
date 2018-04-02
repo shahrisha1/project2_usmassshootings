@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> US Mass Shootings Analysis</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <iframe src ="https://harryli99.carto.com/builder/98e3fa9b-3684-4370-bfed-74c85d81eafd/embed" width="900" height="600"></iframe>
+    <div id = "plot-id"></div>
+    <script src="{{url_for('static', filename='logic.js')}}"></script></body>
+    <select id="selDataset" onchange="getData(this.value)">
+        <option value="default">Case Count vs Year</option>
+        <option value="dataset1">Case Count(Mental Health?) vs Year</option>
+        <option value="dataset2">Case Count(Weapon Legality?) vs Year </option>
+      </select>
+</html>
