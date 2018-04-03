@@ -43,21 +43,27 @@ function mentalhealth_chart(){
 Plotly.d3.json("api/mental-health", (error, response)=>{
     if (error) throw error;
     console.log(response);
-    var year = [];
+    var year_yes = [];
+    var year_no = [];
     var fatality_yes = [];
     var fatality_no = []
     var case_count_yes = [];
     var case_count_no = [];
     for (var i = 0; i < response.length; i++){
-        year.push(response[i].year);
-        fatality_yes.push(response[i].fatalities_mh_yes);
-        fatality_no.push(response[i].fatalities_mh_no);
+        if (typeof (response[i].case_count_mh_yes) !== 'undefined') {
+        year_yes.push(response[i].year)
         case_count_yes.push(response[i].case_count_mh_yes);
+        fatality_yes.push(response[i].fatalities_mh_yes);
+        };
+        if (typeof (response[i].case_count_mh_no) !== "undefined"){
+        year_no.push(response[i].year)
         case_count_no.push(response[i].case_count_mh_no);
+        fatality_no.push(response[i].fatalities_mh_no);
+        };
+
     };
-    console.log(year);
     var trace1 = {
-        x: year,
+        x: year_yes,
         y: case_count_yes,
         mode: 'lines+markers',
         text: poptext(fatality_yes),
@@ -71,7 +77,7 @@ Plotly.d3.json("api/mental-health", (error, response)=>{
       };
 
       var trace2 = {
-        x: year,
+        x: year_no,
         y: case_count_no,
         mode: 'lines+markers',
         text: poptext(fatality_no),
@@ -101,21 +107,26 @@ function weaponlegal_chart(){
 Plotly.d3.json("api/weapon-legality", (error, response)=>{
     if (error) throw error;
     console.log(response);
-    var year = [];
+    var year_yes = [];
+    var year_no = [];
     var fatality_yes = [];
     var fatality_no = []
     var case_count_yes = [];
     var case_count_no = [];
     for (var i = 0; i < response.length; i++){
-        year.push(response[i].year);
-        fatality_yes.push(response[i].fatalities_wl_yes);
-        fatality_no.push(response[i].fatalities_wl_no);
+      if (typeof (response[i].case_count_wl_yes) !== 'undefined'){  
+        year_yes.push(response[i].year);
         case_count_yes.push(response[i].case_count_wl_yes);
+        fatality_yes.push(response[i].fatalities_wl_yes);
+       };
+      if (typeof (response[i].case_count_wl_no) !== 'undefined'){  
+        year_no.push(response[i].year);
         case_count_no.push(response[i].case_count_wl_no);
+        fatality_no.push(response[i].fatalities_wl_no);
+      };
     };
-    console.log(year);
     var trace1 = {
-        x: year,
+        x: year_yes,
         y: case_count_yes,
         mode: 'lines+markers',
         text: poptext(fatality_yes),
@@ -129,7 +140,7 @@ Plotly.d3.json("api/weapon-legality", (error, response)=>{
       };
 
       var trace2 = {
-        x: year,
+        x: year_no,
         y: case_count_no,
         mode: 'lines+markers',
         text: poptext(fatality_no),
@@ -148,7 +159,7 @@ Plotly.d3.json("api/weapon-legality", (error, response)=>{
         xaxis: {title: 'Years'},
         yaxis:{title: 'Number of Incidents'},
         height: 600,
-        width: 900
+        width: 1000
       };
       
       Plotly.newPlot('plot-id', data, layout);

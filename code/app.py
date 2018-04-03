@@ -29,43 +29,41 @@ def shooting_data():
     return jsonify(results)
 
 @app.route("/api/mental-health")
-def mental_health_data():
-    mh_yes_case = session.query(func.count(shootings.case)).group_by(shootings.year).filter(shootings.prior_signs_mental_health == "Yes")
-    mh_no_case = session.query(func.count(shootings.case)).group_by(shootings.year).filter(shootings.prior_signs_mental_health == "No")
-    year = session.query(shootings.year).group_by(shootings.year)
-    mh_yes_fatality = session.query(func.sum(shootings.fatalities)).group_by(shootings.year).filter(shootings.prior_signs_mental_health == "Yes")
-    mh_no_fatality = session.query(func.sum(shootings.fatalities)).group_by(shootings.year).filter(shootings.prior_signs_mental_health == "No")
-    
+def mental_health_yes_data():
+    mh_yes_query = session.query(func.count(shootings.case).label('mh_yes_case'), shootings.year, func.sum(shootings.fatalities).label('mh_yes_fatality') ).group_by(shootings.year).filter(shootings.prior_signs_mental_health == "Yes")
+    mh_no_query = session.query(func.count(shootings.case).label('mh_no_case'), shootings.year, func.sum(shootings.fatalities).label('mh_no_fatality') ).group_by(shootings.year).filter(shootings.prior_signs_mental_health == "No")
     results = []
-
-    for a,b,c,d,e in zip(mh_yes_case, mh_no_case, year, mh_yes_fatality, mh_no_fatality):
+    for i in mh_yes_query:
         mh_dict = {}
-        mh_dict['case_count_mh_yes'] = a[0]
-        mh_dict['case_count_mh_no'] = b[0]
-        mh_dict['year'] = c[0]
-        mh_dict['fatalities_mh_yes'] = d[0]
-        mh_dict['fatalities_mh_no'] = e[0]
+        mh_dict['case_count_mh_yes'] = i.mh_yes_case
+        mh_dict['year'] = i.year
+        mh_dict['fatalities_mh_yes'] = i.mh_yes_fatality
         results.append(mh_dict)
+    for j in range(len(results)):
+        for k in mh_no_query:
+            if (k.year == results[j]['year']):
+                results[j]['case_count_mh_no'] = k.mh_no_case
+                results[j]['fatalities_mh_no'] = k.mh_no_fatality
     return jsonify(results)
+
+
 
 @app.route("/api/weapon-legality")
 def weapon_legality_data():
-    wl_yes_case = session.query(func.count(shootings.case)).group_by(shootings.year).filter(shootings.weapons_obtained_legally == 'Yes')
-    wl_no_case = session.query(func.count(shootings.case)).group_by(shootings.year).filter(shootings.weapons_obtained_legally == 'No')
-    year = session.query(shootings.year).group_by(shootings.year)
-    wl_yes_fatality = session.query(func.sum(shootings.fatalities)).group_by(shootings.year).filter(shootings.weapons_obtained_legally == 'Yes')
-    wl_no_fatality = session.query(func.sum(shootings.fatalities)).group_by(shootings.year).filter(shootings.weapons_obtained_legally == 'No')
-
+    wl_yes_query = session.query(func.count(shootings.case).label('wl_yes_case'), shootings.year, func.sum(shootings.fatalities).label('wl_yes_fatality') ).group_by(shootings.year).filter(shootings.weapons_obtained_legally == 'Yes')
+    wl_no_query = session.query(func.count(shootings.case).label('wl_no_case'), shootings.year, func.sum(shootings.fatalities).label('wl_no_fatality') ).group_by(shootings.year).filter(shootings.weapons_obtained_legally == 'No')
     results = []
-
-    for a,b,c,d,e in zip(wl_yes_case, wl_no_case, year,  wl_yes_fatality, wl_no_fatality):
-        wl_dict = {}
-        wl_dict['case_count_wl_yes'] = a[0]
-        wl_dict['case_count_wl_no'] = b[0]
-        wl_dict['year'] = c[0]
-        wl_dict['fatalities_wl_yes'] = d[0]
-        wl_dict['fatalities_wl_no'] = e[0]
-        results.append(wl_dict)
+    for i in wl_yes_query:
+        mh_dict = {}
+        mh_dict['case_count_wl_yes'] = i.wl_yes_case
+        mh_dict['year'] = i.year
+        mh_dict['fatalities_wl_yes'] = i.wl_yes_fatality
+        results.append(mh_dict)
+    for j in range(len(results)):
+        for k in wl_no_query:
+            if (k.year == results[j]['year']):
+                results[j]['case_count_wl_no'] = k.wl_no_case
+                results[j]['fatalities_wl_no'] = k.wl_no_fatality
     return jsonify(results)
 
 if __name__ == "__main__":
