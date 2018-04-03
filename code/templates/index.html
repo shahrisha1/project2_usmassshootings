@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>US Mass Shootings</title>
+
+
+<!-- Bootstrap -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+
+<!-- CSS STYLING -->
+<style>
+body {
+    background-color: black;
+    }
+h1 {
+    text-align:center;
+    color: white; 
+    font-family: Verdana;  
+}
+
+div {
+    background-color: black;
+}
+
+p {
+    text-align:center;
+    color: white; 
+    font-family: Verdana;
+    margin-top:25px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    margin-left: 120px;
+}
+</style>  
+
+<body style="background-color:black">
+
+<!-- TITLE -->
+
+    <div id="intro" class="container">
+        <div class="jumbotron">
+          <h1 style="text-align:center;color:white;font-family:Verdana"class="display-3">THE RISE OF US MASS SHOOTINGS</h1>
+          <hr class="my-4">
+          <p style="text-align:center;color:white;font-family:Verdana"><strong>A VIEW FROM 1982-2018</strong></p>
+          <p class="lead">
+          </p>
+        </div>
+    </div>
+
+<!-- CARTO MAP -->
+
+        <div align="center";class="cartodb-popup-content-wrapper">
+            <!-- <h1 style="text-align:center;color:white;font-family:Verdana" class="display-3">A look in time</h1> -->
+
+            <div class="cartodb-popup-content">
+                <iframe width="80%" height="700" scrolling="no" frameborder="yes" src="https://harryli99.carto.com/builder/98e3fa9b-3684-4370-bfed-74c85d81eafd/embed"></iframe>
+            </div>
+        </div>
+
+<!-- LINE BREAKS -->
+
+    <br></br>
+    <br></br>
+<!-- LEGALITY -->
+
+    <div class="row">
+        <h1 style="text-align:center;color:white;font-family:Verdana" class="display-3">How did the shooters obtain their weapons?</h1>
+      <div align="center";class="col-lg-6 h-75 card mb-3">
+        <canvas id="bar-chart" style="height:800px;width: 500px;"></canvas>
+      </div>
+      <div align="left";class="col-lg-6 h-75 card mb-3">
+          <p style="text-align:center;color:white;font-family:Verdana;font-size:20">70% Weapons used in mass shootings across three decades , were purchased legally, which raises questions about how preventable
+        gun violence is under current U.S. firearm laws. Records of the gunmen would likely have been raised as red flags had they
+        been fully examined through the federal background check system. </p>
+      </div>
+   </div>
+
+<!-- LINE BREAKS -->
+
+<br></br>
+<br></br>
+
+<!-- WEAPONS -->
+
+   <div class="row">
+        <h1 style="text-align:center;color:white;font-family:Verdana" class="display-3">What type of weapons did they use?</h1>
+      <div align="center";align="center"; class="col-lg-6 h-75 card mb-3">
+            <canvas id="bar-chart1" style="height:800px;width: 500px;"></canvas>
+      </div>
+       <div align="center";class="col-lg-6 h-75 card mb-3">
+          <p style="text-align:left;color:white;font-family:Verdana; font-size:20">
+            <br></br>
+            <br></br>
+            <br><strong>What is the difference between a semi-automatic/automatic?</strong></br>
+            <br>The term “semi-automatic” refers to any firearm designed to fire one bullet with one trigger squeeze, then automatically reload the chamber with a cartridge from a magazine and re-cock the firing mechanism to be ready to fire again.</br>
+             Gun control arguments often focus on so-called black rifles, but the differences between those and any other semi-automatic rifles often are only cosmetic. Semi-automatic guns — whether they are black rifles, pistols, target rifles or otherwise — all largely operate the same way.
+             Automatic weapons, meanwhile, are different in that squeezing the trigger once fires cartridges repeatedly until the shooter releases it. These weapons are often described as machine guns.
+            The gunman who killed 58 people in Las Vegas on Oct. 1, 2017, used a device called a “bump stock” to allow a semi-automatic rifle to fire at a rate of speed similar to an automatic rifle.
+            While semi-automatic rifles are widely available, fully automatic weapons are not. You can still buy an automatic weapon, but their sale and ownership is highly regulated and exceptionally expensive. 
+            <br></br>"Semiautomatic rifles have been used in some of the country’s deadliest shootings, such as those in
+    Newtown, Orlando, San Bernardino and Las Vegas. The AR-15, a lightweight, customizable version of the military’s M16, soared
+    in popularity after a 10-year federal ban on assault weapons expired in 2004. Some of the Las Vegas shooter’s guns had been
+    fitted with legal devices called “bump-fire stocks,” which allow semiautomatic rifles to fire as quickly as automatic ones" (The Washington Post)
+      </p> 
+       
+        </div>
+   </div> 
+
+<!-- LINE BREAK -->
+
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<!-- GUN OWNERSHIP -->
+
+<h1 style="text-align:center;color:white;font-family:Verdana" class="display-3">What population of residents across the states own guns?</h1>
+  <canvas id="bar-chart2" width="800px" height="800px"></canvas>
+<p style="text-align:left;color:white;font-family:Verdana; font-size:20">
+    <br></br>
+    <br></br>
+    <br>
+    <strong>What is the difference between a semi-automatic/automatic?</strong>
+    </br>
+    <br>The term “semi-automatic” refers to any firearm designed to fire one bullet with one trigger squeeze, then automatically
+    reload the chamber with a cartridge from a magazine and re-cock the firing mechanism to be ready to fire again.</br>
+    Gun control arguments often focus on so-called black rifles, but the differences between those and any other semi-automatic
+    rifles often are only cosmetic. Semi-automatic guns — whether they are black rifles, pistols, target rifles or otherwise
+    — all largely operate the same way. Automatic weapons, meanwhile, are different in that squeezing the trigger once fires
+    cartridges repeatedly until the shooter releases it. These weapons are often described as machine guns. The gunman who
+    killed 58 people in Las Vegas on Oct. 1, 2017, used a device called a “bump stock” to allow a semi-automatic rifle to
+    fire at a rate of speed similar to an automatic rifle. While semi-automatic rifles are widely available, fully automatic
+    weapons are not. You can still buy an automatic weapon, but their sale and ownership is highly regulated and exceptionally
+    expensive.
+</p>
+
+<!-- LINE BREAK -->
+
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<!-- RELATIONSHIP -->
+
+
+<div class="container">
+    <!-- <section class="row"> -->
+        <div class="col-md-12">
+            <h1 style="text-align:center;color:white;font-family:Verdana" class="display-3">Is there a correlation between number of gun laws and incidents by state?</h1>
+        </div>
+        <div class="col-md-8">
+            <canvas id="bar-chart3" width="800px" height="800px"></canvas>
+        </div>
+        <div class="col-md-4">
+            <p style="text-align:left;color:white;font-family:Verdana; font-size:14px;margin-top: 80px;margin-left:20px">
+                California has the largest number of gun laws (104) but also is in the highest number of mass shooting incidents (17) and
+                is in the top two highest number of victims (245). Nevada has the highest number of fatalities (770) but only 2 incidents
+                and ranks among the lowest number of gun laws (15). Nevada is an outlier/anomaly and skews the data.It seems intuitive
+                that increased gun laws would lead to lower mass shootings, however, there is no direct correlation between the number
+                of laws and the number of incidents. In addition there were 16 states with 0 incidents/victims of mass shootings.If there
+                was additional time, it would be interesting to examine the gun laws of these states in greater detail to understand
+                why there were no incidents. 
+            </p>
+        </div>
+</div>
+<!-- <h1 style="text-align:center;color:white;font-family:Verdana" class="display-3">Is there a correlation between number of gun laws and incidents by state?</h1>
+  <canvas id="bar-chart3" width="800px" height="800px"></canvas>
+  <p style="text-align:center;color:white;font-family:Verdana; font-size:14px;"> California has the largest number of gun laws (104) but also is in the highest number of mass shooting incidents (17) and is in the top two highest number of victims (245).
+      Nevada has the highest number of fatalities (770) but only 2 incidents and ranks among the lowest number of gun laws (15).
+      Nevada is an outlier/anomaly and skews the data.It seems intuitive that increased gun laws would lead to lower mass shootings, however, there is no direct correlation between the number of laws and the number of incidents.
+      In addition there were 16 states with 0 incidents/victims of mass shootings.If there was additional time, it would be interesting to examine the gun laws of these states in greater detail to understand why there were no incidents. </p> -->
+
+
+
+
+<!-- Harry's Code -->
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<div class="container">
+    <!-- <section class="row"> -->
+    <!-- <div class="col-md-12"> -->
+            <h1 style="text-align:center;color:white;font-family:Verdana" class="display-3">Are mass shootings related to mental health or weapon acquisition?</h1>
+
+    <div id="plot-id"> </div>
+    
+    
+    
+    <select id="selDataset" onchange="getData(this.value)">
+        <h1 style="text-align:center;color:white;font-family:Verdana" class="display-3"></h1>
+    
+        <option value="default">Case Count vs Year</option>
+        <option value="dataset1">Case Count(Mental Health?) vs Year</option>
+        <option value="dataset2">Case Count(Weapon Legality?) vs Year </option>
+    </select>
+    </div>
+</div>
+
+ <!-- <div id = "plot-id"> </div>
+<h1 style="text-align:center;color:white;font-family:Verdana" class="display-3"></h1>
+
+ <script src="{{url_for('static', filename='logic.js')}}"></script>
+ <select id="selDataset" onchange="getData(this.value)">
+     <h1 style="text-align:center;color:white;font-family:Verdana" class="display-3"></h1>
+
+     <option value="default">Case Count vs Year</option>
+     <option value="dataset1">Case Count(Mental Health?) vs Year</option>
+     <option value="dataset2">Case Count(Weapon Legality?) vs Year </option>
+   </select> -->
+  
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<!-- PIE CHART FOR VENUE -->
+<div class="row">
+    <h1 style="text-align:center;color:white;font-family:Verdana;margin-top: 80px" class="display-3">Where did mass shootings take place?</h1>
+
+    <div align="center" class="col-lg-6 h-75 card mb-3 ml-3">
+        <canvas id="donut" style="height:800px;width: 500px; display: block"></canvas>
+    </div>
+    <div class="col-lg-6 h-75 card mb-3">
+        <p style="text-align:left;color:white">There are a number of venues where mass shootings took place, which include, workplace, school, military, religious, and
+        airport. Our dataset had ungrouped incidents, which includes three recent incidents, Las Vegas Strip massacre, Orlando nightclub
+        massacre, and Aurora theater shooting, each having over 80 victims (Las Vegas having over 750 victims). Of these, 30% of mass
+        shootings took place in a workplace, with the largest incident (defined by total victims) being the San Bernandido shooting
+        in 2015, having 35 victims. Though the workplace is the top largest venue in terms of number of incidents, school venues
+        top incident, Virginia Tech massacre, resulted in 36% more victims. </p>
+    </div>
+</div>
+
+
+
+
+<!-- BACK TO TOP -->
+
+<div class="row">
+    <h1 style="text-align:center;color:white;font-family:Verdana" class="display-3"></h1><strong><a href="#top">Back to top of page</a></strong>
+    <div align="center"; class="col-lg-6 h-75 card mb-3"></div>
+<br></br>
+</div>
+
+<script src="{{url_for('static', filename='chart.js')}}"></script>
+<script src="{{url_for('static', filename='logic.js')}}"></script>
+</body>
+</html>

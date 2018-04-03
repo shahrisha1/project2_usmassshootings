@@ -1,0 +1,98 @@
+,state,fatalities,injured,total_victims,weapons_obtained_legally,where_obtained,lawtotal
+0,California,3,0,3,Yes,TBD,104
+1,California,5,10,15,No,TBD,104
+2,California,3,2,5,No,Unclear; the firearm was stolen in Utah. A second handgun Lam had (also stolen) was unused in the attack.,104
+3,California,3,0,3,Unknown,,104
+4,California,14,21,35,Yes,The suspects purchased their handguns in the United States; the assault rifles were purchased by a third party.,104
+5,California,6,13,19,Yes,,104
+6,California,4,2,6,Unknown,,104
+7,California,6,3,9,Yes,Assembled a rifle out of component parts.,104
+8,California,7,3,10,Yes,"Bullseye in Castro Valley, Calif.",104
+9,California,8,1,9,Yes,Unknown,104
+10,California,8,0,8,Yes,"Pawn shops in Grants and Gallup, N.M.",104
+11,California,5,2,7,Yes,"B&B Gun Sales in Orange County, Calif.",104
+12,California,9,6,15,No,"Super Pawn and Pacific Tactical Weapons, both in Las Vegas, Nev.",104
+13,California,4,10,14,Yes,Local gun retailer,104
+14,California,6,29,35,Yes,"Sandy Trading Post in Sandy, Ore.; Hunter Loan and Jewelry Co. in Stockton, Calif.",104
+15,California,7,4,11,Yes,Various sporting goods and gun stores in Northern California,104
+16,California,22,19,41,Yes,Unknown,104
+17,Florida,17,14,31,Yes,A Florida pawn shop,21
+18,Florida,5,0,5,TBD,,21
+19,Florida,5,6,11,Yes,,21
+20,Florida,49,53,102,Yes,"Shooting center in Port St. Lucie, Florida",21
+21,Florida,7,0,7,Yes,Florida Gun Center,21
+22,Florida,5,3,8,Yes,"One purchased from Big E's in Tampa, Fla.",21
+23,Florida,6,1,7,Yes,Unknown,21
+24,Florida,10,4,14,Yes,Unknown,21
+25,Florida,6,14,20,Yes,"Gun store in Norwood, Ohio; The Oaks Trading Post in Melbourne, Fla.",21
+26,Florida,8,3,11,Yes,"Garcia Gun Center in Hialeah, Fla.",21
+27,Pennsylvania,4,1,5,TBD,TBD,36
+28,Pennsylvania,3,0,3,TBD,,36
+29,Pennsylvania,6,5,11,Yes,"Local stores in Nickel Mines, Penn.",36
+30,Texas,26,20,46,Unknown,Purchased in April 2016 from an Academy Sports & Outdoors store in San Antonio,18
+31,Texas,5,11,16,Yes,online and or gun show,18
+32,Texas,3,12,15,Yes,"Local gun store in Killeen, Guns Galore",18
+33,Texas,13,30,43,Yes,"Guns Galore in Kileen, Texas",18
+34,Texas,8,7,15,Yes,"Trader's Village flea market in Grand Prairie, Texas",18
+35,Texas,6,0,6,Yes,Unknown,18
+36,Texas,24,20,44,Yes,"Mike's Gun Shop in Henderson, Nev.",18
+37,Texas,6,1,7,No,"Hines Boulevard Pawn Shop in Dallas, Texas",18
+38,Colorado,3,0,3,TBD,,30
+39,Colorado,3,9,12,Unknown,Unclear,30
+40,Colorado,3,0,3,Yes,Unclear,30
+41,Colorado,12,70,82,Yes,"Gander Mountain stores in Thornton and Aurora, Colo.; Bass Pro Shop in Denver, Colo.; BulkAmmo.com",30
+42,Colorado,13,24,37,No,"Purchased variously at Tanner Gun Show in Denver, Colo. and from an individual",30
+43,Colorado,4,1,5,Unknown,Unknown,30
+44,Maryland,3,3,6,No,Unclear,64
+45,Nevada,58,700,758,Yes,Two gun shops in Nevada,15
+46,Nevada,5,7,12,Yes,Purchased from an individual,15
+47,Ohio,3,0,3,TBD,,16
+48,Ohio,5,7,12,Yes,Received as a gift from mother,16
+49,Washington,5,0,5,TBD,,43
+50,Washington,5,1,6,No,Gun was his father's.,43
+51,Washington,5,0,5,Yes,Unknown,43
+52,Washington,6,1,7,Yes,"Bull's Eye Shooter Supply in Tacoma, Wash.",43
+53,Washington,4,1,5,No,Stolen from an individual in Seattle.,43
+54,Washington,7,2,9,Yes,"Various sporting goods stores in Kalispell, Mont.",43
+55,Washington,5,23,28,Yes,"Gun dealer in Spokane, Wash.",43
+56,Louisiana,3,3,6,Unknown,,12
+57,Kansas,3,14,17,Yes,,7
+58,Michigan,6,2,8,Yes,,21
+59,Michigan,5,5,10,Yes,Local gun store,21
+60,Oregon,9,9,18,Yes,From the home he shared with his mother. All were legally obtained by either Harper/Mercer or family members.,35
+61,Oregon,4,25,29,No,"Purchased variously from friend and father, and stolen from father",35
+62,Tennessee,5,2,7,Yes,"On the internet, via Armslist.com",22
+63,South Carolina,9,1,10,Yes,"Shooter's Choice gun store in West Columbia, South Carolina",12
+64,South Carolina,4,3,7,No,Unknown,12
+65,Wisconsin,3,1,4,Yes,Unclear,23
+66,Wisconsin,7,3,10,Yes,Unknown,23
+67,Wisconsin,6,1,7,Yes,Issued by Forest County Sheriff's Department,23
+68,Wisconsin,7,4,11,Yes,"Gun dealer in Waukesha, Wis.",23
+69,New York,5,2,7,Yes,"Frank's Guns in Marcy, NY",75
+70,New York,14,4,18,Yes,"Gander Mountain in Johnson City, N.Y.",75
+71,New York,6,19,25,Yes,"Turner's Outdoorsman in Signal Hill, Calif.",75
+72,New York,5,0,5,Yes,"Mumford Sports in Litchfield, Ohio",75
+73,Connecticut,27,2,29,No,Stolen from mother,89
+74,Connecticut,9,2,11,Yes,"Gun dealer in East Windsor, Conn.",89
+75,Connecticut,5,1,6,Yes,Unknown,89
+76,Minnesota,7,1,8,Yes,Unknown,41
+77,Minnesota,10,5,15,No,Glock and Remington stolen from grandfather,41
+78,Georgia,5,0,5,Yes,Unknown,6
+79,Georgia,9,13,22,Yes,"Glock purchased from gun store in Warner Robins, Ga.",6
+80,Arizona,6,13,19,Yes,"Sportsmen's Warehouse in Tucson, Ariz.",11
+81,North Carolina,8,3,11,Yes,Local sporting goods stores and individuals,30
+82,North Carolina,4,8,12,Yes,Unknown,30
+83,Kentucky,6,1,7,Yes,Unknown,7
+84,Kentucky,9,12,21,Yes,"AK-47 purchased from Tilford's Gun Sales in Louisville, Ky.",7
+85,Illinois,5,21,26,Yes,"Online and gun retailers in Champaign, Ill.",64
+86,Illinois,5,4,9,Yes,"Some purchased from Pepper Sports in Glen Ellyn, Ill.",64
+87,Missouri,6,2,8,No,Taken in burglary and from fallen police officer,7
+88,Nebraska,9,4,13,No,Stolen from grandfather,22
+89,Virginia,32,23,55,Yes,"Purchased variously online and from Roanoke Firearms in Roanoke, Va.",13
+90,Utah,6,4,10,Unknown,"Purchased variously from Sportsman's Fast Cash in West Valley City, Utah and individuals",11
+91,Mississippi,7,8,15,Yes,Purchased from an individual,5
+92,Massachusetts,7,0,7,Yes,Unknown,100
+93,Hawaii,7,0,7,Yes,"Hunting Supplies of Hawaii (The Armory) in Honolulu, Hawaii",78
+94,Arkansas,5,10,15,No,Stolen from grandfather and father,11
+95,Iowa,6,1,7,Yes,"Fin & Feather in Iowa City, Iowa",25
+96,Oklahoma,15,6,21,Yes,"Issued by Oklahoma National Guard, where Sherrill served, for target competition",9
